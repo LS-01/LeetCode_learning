@@ -1,4 +1,4 @@
-package com.ls.leetcode;
+package com.ls.leetcode.practice;
 
 /**
  * 11
