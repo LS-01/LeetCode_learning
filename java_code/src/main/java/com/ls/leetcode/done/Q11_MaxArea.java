@@ -1,4 +1,4 @@
-package com.ls.leetcode.practice;
+package com.ls.leetcode.done;
 
 /**
  * 11
@@ -15,11 +15,29 @@ package com.ls.leetcode.practice;
  * 输入：[1,8,6,2,5,4,8,3,7]
  * 输出：49
  *
+ * 执行用时： 2 ms , 在所有 Java 提交中击败了 99.21% 的用户
+ * 内存消耗： 40 MB , 在所有 Java 提交中击败了 66.15% 的用户
+ *
  */
 public class Q11_MaxArea {
 
     public int maxArea(int[] height) {
         int max = 0;
+        int temp = 0;
+        int i = 0;
+        int j = height.length - 1;
+        while(j > i){
+            if(height[i] > height[j]){
+                temp = (j - i) * height[j];
+                j--;
+            } else {
+                temp = (j - i) * height[i];
+                i++;
+            }
+            if(temp > max){
+                max = temp;
+            }
+        }
         return max;
     }
 

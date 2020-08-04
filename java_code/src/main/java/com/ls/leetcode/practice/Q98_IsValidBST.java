@@ -2,6 +2,8 @@ package com.ls.leetcode.practice;
 
 import com.ls.leetcode.general.TreeNode;
 
+import java.util.Stack;
+
 /**
  * 98
  * 给定一个二叉树，判断其是否是一个有效的二叉搜索树。
@@ -34,11 +36,17 @@ import com.ls.leetcode.general.TreeNode;
 public class Q98_IsValidBST {
 
     public boolean isValidBST(TreeNode root) {
-        return false;
+        if(root == null){
+            return false;
+        }
+        Stack<TreeNode> treeNodeStack = new Stack<>();
+
+        return true;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(new Q98_IsValidBST().isValidBST(TreeNode.trans(new Integer[]{2,1,3})));
+        System.out.println(new Q98_IsValidBST().isValidBST(TreeNode.trans(new Integer[]{5,1,4,null,null,3,6})));
     }
 
 }
