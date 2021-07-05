@@ -47,4 +47,9 @@ public class Q785_IsBipartite {
         return false;
     }
 
+    public static void main(String[] args) {
+        System.out.println(new Q785_IsBipartite().isBipartite(new int[][]{{1,3}, {0,2}, {1,3}, {0,2}}));
+        System.out.println(new Q785_IsBipartite().isBipartite(new int[][]{{1,2,3}, {0,2}, {0,1,3}, {0,2}}));
+    }
+
 }
